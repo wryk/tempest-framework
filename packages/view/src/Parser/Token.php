@@ -63,7 +63,7 @@ final class Token
         $this->rawAttributes[] = $token;
 
         if ($token->type === TokenType::ATTRIBUTE_NAME) {
-            $this->htmlAttributes[$this->attributeName($token->content)] = '';
+            $this->htmlAttributes[$this->attributeName($token->content)] = null;
         } elseif ($token->type === TokenType::PHP) {
             $this->phpAttributes[] = $token->content;
         }
